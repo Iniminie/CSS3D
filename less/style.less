@@ -30,7 +30,6 @@ body
     margin: 0 auto;
     
     -webkit-transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform 1s;
     -webkit-transform-origin: 50% 50% -485px;
 }
 
@@ -46,8 +45,16 @@ p
 
 #front
 {
-    position: absolute;
-    background: lighten(@lgray, 5%);   
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 970px;
+    height: 100%; 
+    
+    .inner
+    {
+        background: lighten(@lgray, 5%);     
+    }  
 }
 
 #right
