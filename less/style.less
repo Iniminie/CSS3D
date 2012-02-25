@@ -2,18 +2,101 @@
 
 
 /* ===== Primary Styles ========================================================
-   Author:
+   Author: Frank van Dongen
    ========================================================================== */
 
+@lgray: #dedede;
 
+html
+{
+    background: @lgray;   
+}
 
+body
+{
+    -webkit-perspective: 1200px;    
+}
 
+.header h1
+{
+    margin:0;
+    margin-left: 10px;
+    padding:0;
+}
 
+#container
+{
+    width: 970px;
+    margin: 0 auto;
+    
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-transform-origin: 50% 50% -485px;
+}
 
+h2
+{
+    margin-left: 20px;    
+}
 
+p
+{
+    margin-left: 10px;
+}
 
+#front
+{
+    position: absolute;
+    background: lighten(@lgray, 5%);   
+}
 
+#right
+{
+    position:absolute;
+    top: 0;
+    left: 970px;
+    width: 970px;
+    height: 100%; 
+    -webkit-transform-origin: 0% 0%;
+    -webkit-transform: rotateY(90deg); 
+    
+    .inner
+    {
+        background: lighten(@lgray, 5%);     
+    }
+}
 
+#back
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 970px;
+    height: 100%; 
+    -webkit-transform-origin: 50% 50% -485px;
+    -webkit-transform: rotateY(180deg); 
+    
+    .inner
+    {
+        background: lighten(@lgray, 5%);     
+    }
+}
+
+#left
+{
+    position:absolute;
+    top: 0;
+    left: -970px;
+    width: 970px;
+    height: 100%; 
+    -webkit-transform-origin: 100% 0%;
+    -webkit-transform: rotateY(-90deg); 
+    
+    .inner
+    {
+        background: lighten(@lgray, 5%);     
+    }
+}
 
 @import "media-queries.less";
 @import "helpers.less";
